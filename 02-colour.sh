@@ -15,4 +15,3 @@ Light Yellow	93	103
 Light Blue	94	104
 Light Magenta	95	105
 Light Cyan	96	106
-White	97	107
