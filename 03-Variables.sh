@@ -2,7 +2,7 @@
 a=10
 b=20
 c=30
-d=40
+d=
 
 echo -e "\e[32m $a \e[0m "
 echo -e "\e[32m $b \e[0m "
