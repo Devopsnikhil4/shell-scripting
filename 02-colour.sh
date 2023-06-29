@@ -1,3 +1,2 @@
 #!/bin/bash
-i love devops
-
+echo welcome to devops
