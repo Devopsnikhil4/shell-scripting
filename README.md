@@ -1,11 +1,4 @@
 # shell-scripting
 This is repository to automate and learn the project using bash
 i want to explore bash
-sdkfjasd;klfj
-sdfasdfgit 
-sdlfjkasd;lfjas
-asdflajsdflaksjdf
-asdfasdflkjasdflk
-asdf,ansdflkas
-
-asdflkjasdlfkjasf
+i want to saave all the code to repository.
