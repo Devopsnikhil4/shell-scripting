@@ -5,4 +5,5 @@ sample() {
     echo "My name is Dharvik"
 }
 
+sample
 # just type sample
