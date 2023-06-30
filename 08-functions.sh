@@ -4,3 +4,5 @@ sample() {
     echo "My name is Nithya"
     echo "My name is Dharvik"
 }
+
+# just type sample
