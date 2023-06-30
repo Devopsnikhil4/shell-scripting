@@ -4,7 +4,7 @@
 #Aliases  (Aliases are shortcuts)
 #shell builtin commands
 #Fuctions #Fuctions are a set of command that can be written in a sequence and can be called n number of times as per required basics
-$sample() {
+sample() {
 echo "My name is Nikhil kumar"
 echo "My name is Bharath kumar"
 echo "My name is Nithya"
