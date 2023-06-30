@@ -14,3 +14,9 @@ echo "current Topics is $3"
 
 #bash scriptName.sh 100 200 300 (Like this you can supply  a maximum of 9 variables from the command line)
 #                     $1  $2  $3
+
+echo $* #is going to print the used variables
+echo $@ #is going to print the used variables
+echo $$ #is going to print the PID of the current process
+echo $# #is going to print number of arguments
+echo $? #is going to print the exit code of the last command.
