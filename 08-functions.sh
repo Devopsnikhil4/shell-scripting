@@ -6,4 +6,3 @@ sample() {
 }
 
 sample
-# just type sample
