@@ -6,3 +6,5 @@ sample() {
 }
 
 sample
+
+# we can even have function in function
