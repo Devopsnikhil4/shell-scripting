@@ -11,4 +11,4 @@ TODAY_DATE=$(date +%F)
 echo -e "\e[35m $TODAY_DATE \e[0m"
 
 
-echo $$
+echo $@
