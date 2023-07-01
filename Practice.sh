@@ -11,10 +11,4 @@ TODAY_DATE=$(date +%F)
 echo -e "\e[35m $TODAY_DATE \e[0m"
 
 
-echo "Name of the script executed is $0"
-echo "Name of the Trainer is $1"
-echo "Training Batch Number is $2"
-echo "Current Topics is $3" 
-$1=Nikhil
-$2=22
-$3=Nithya
+echo $?
