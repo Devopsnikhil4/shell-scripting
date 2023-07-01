@@ -8,4 +8,4 @@ Nikhil=Nithya
 echo -e "\e[33m $Nikhil  \e[0m"
 
 TODAY_DATE=$(date +%F)
-echo -e $TODAY_DATE
+echo -e "\e[36m $TODAY_DATE \e[0m"
