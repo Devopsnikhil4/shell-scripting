@@ -9,4 +9,4 @@ echo -e "\e[33m $Nikhil  \e[0m"
 
 TODAY_DATE=$(date +%F)
 echo -e "\e[35m $TODAY_DATE \e[0m"
-NO_OF_SESSIONS=$(who | wc -l)
+echo NO_OF_SESSIONS=$(who | wc -l)
