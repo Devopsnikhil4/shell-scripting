@@ -3,3 +3,4 @@
 echo bash scriptname.sh
 # * bash scriptname.sh
 echo * bash scriptname.sh
+# *   bash scriptName.sh
