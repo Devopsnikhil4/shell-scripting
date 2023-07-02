@@ -16,14 +16,6 @@ echo "Training Batch Number is $2"
 echo "Current Topics is $3"
 echo $#
 
-sample() {
-    echo "I am a sample function with name sample"
-    echo "I am executing the sample function"
-    echo "Sample function is completed"
-
-    echo "Calling Status Function"
-    status
-}
 
 status() {                                                     
     echo -e "Good Morning and todays date is \e[32m $(date +%F)  \e[0m"
