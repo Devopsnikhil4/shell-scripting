@@ -22,5 +22,5 @@ sample() {
     echo "Sample function is completed"
 
     echo "sample"
-    status
+    sample
 }
