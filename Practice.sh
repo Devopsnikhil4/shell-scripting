@@ -15,7 +15,7 @@ echo "Name of the Trainer is $1"
 echo "Training Batch Number is $2"
 echo "Current Topics is $3"
 echo $#
-read -p "Enter you are name :"
+
 sample() {
     echo "I am a sample function with name sample"
     echo "I am executing the sample function"
