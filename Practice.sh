@@ -15,5 +15,5 @@ echo "Name of the Trainer is $1"
 echo "Training Batch Number is $2"
 echo "Current Topics is $3"
 echo $#
-read -p "Enter you are name :"name
+read -p "Enter you are name :"Nikhil
 echo -e "Name of the entered value is $Nikhil"
