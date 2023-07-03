@@ -36,11 +36,16 @@ if [ $? -ne 0 ] ; then
     stat $?
 fi
 
-echo -n "Downloading the $COMPONENT file : "
+echo -n "Downloading the $COMPONENT component : "
 curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip"
 stat $?
 
-$ cd /home/roboshop
+echo -n "Copying the $COMPONENT to $APPUSER home directory : "
+cd /home/$APPUSER
+unzip -o /tmp/catalogue.zip &>> LOGFILE
+stat $?
+
+
 $ unzip /tmp/catalogue.zip
 $ mv catalogue-main catalogue
 $ cd /home/roboshop/catalogue
