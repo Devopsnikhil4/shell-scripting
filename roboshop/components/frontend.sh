@@ -1,6 +1,7 @@
 #!bin/bash
 
 COMPONENT=frontend
+LOGFILE="/tmp/${COMPONENT}.log"
 
 ID=$(id -u)
 if [ $ID -ne 0 ] ; then
@@ -18,7 +19,7 @@ fi
 }
 
 echo -n "Installing Nginx :"
-yum install nginx -y &>> "/tmp/${COMPONENT}.log"
+yum install nginx -y &>> LOGFILE
 stat $?
 
 echo -n "Downloading the ${COMPONENT} component :"
@@ -27,8 +28,17 @@ stat $?
 
 echo -n "performing cleanup: "
 cd /usr/share/nginx/html
-rm -rf *  &>> "/tmp/{COMPONENT}.log"
+rm -rf *  &>> LOGFILE
 stat $?
+
+echo -n "EXtracting ${COMPONENT} component :"
+unzip /tmp/${COMPONENT}.zip &>> LOGFILE
+mv static/* .           &>> LOGFILE
+rm -rf ${COMPONENT}-main README.md
+mv localhost.conf /etc/nginx/default.d/roboshop.conf
+stat $?
+
+
 
 # The frontend is the service in RobotShop to serve the web content over Nginx.
 
