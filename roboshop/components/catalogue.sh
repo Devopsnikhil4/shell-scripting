@@ -19,6 +19,6 @@ fi
 }
 
 echo -e "Installing Nodejs : "
-curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -
+curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -  &>> LOGFILE
 yum install nodejs -y   &>> LOGFILE
 stat $?
