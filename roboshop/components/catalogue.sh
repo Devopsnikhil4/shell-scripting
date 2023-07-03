@@ -44,9 +44,3 @@ echo -n "Copying the $COMPONENT to $APPUSER home directory : "
 cd /home/$APPUSER
 unzip -o /tmp/catalogue.zip &>> LOGFILE
 stat $?
-
-
-$ unzip /tmp/catalogue.zip
-$ mv catalogue-main catalogue
-$ cd /home/roboshop/catalogue
-$ npm install
