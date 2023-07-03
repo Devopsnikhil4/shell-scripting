@@ -28,7 +28,6 @@ fi
 
 echo -n "performing cleanup: "
 cd /usr/share/nginx/html
-
 rm -rf *  &>> "/tmp/{COMPONENT}.log"
 
 
