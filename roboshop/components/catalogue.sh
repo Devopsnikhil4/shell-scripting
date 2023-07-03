@@ -2,6 +2,7 @@
 
 COMPONENT=mongodb
 LOGFILE="/tmp/${COMPONENT}.log"
+APPUSER="roboshop"
 
 ID=$(id -u)
 if [ $ID -ne 0 ] ; then
@@ -28,6 +29,8 @@ echo -n "Instatalling Nodejs : "
 yum install nodejs -y &>> LOGFILE
 stat $?
 
-echo -n "Creating the Service Account:"
-useradd roboshop
+id $APPUSER
+if [ $? -ne 0 ] ; then
+    echo -n "Creating the Service Account:"
+    useradd $APPUSER
 stat $?
