@@ -18,7 +18,8 @@ else
 fi
 }
 
-echo -n "Installing Nodejs : "
-curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -  &>> LOGFILE
-yum install nodejs -y   &>> LOGFILE
+echo -e "****** \e[35m $COMPONENT installation is Started \e[0m******"
+
+echo -n "Configuring the $COMPONENT repo :"
+curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -
 stat $?
