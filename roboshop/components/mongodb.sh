@@ -18,7 +18,7 @@ else
 fi
 }
 
-echo -e "****** \e[31m $COMPONENT installation is started \e[0m******"
+echo -e "****** \e[35m $COMPONENT installation is started \e[0m******"
 
 echo -n "Configuring the $COMPONENT repo :"
 curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/stans-robot-project/mongodb/main/mongo.repo
@@ -58,4 +58,4 @@ mongo < catalogue.js  &>> LOGFILE
 mongo < users.js      &>> LOGFILE
 stat $?
 
-echo -e "****** \e[31m $COMPONENT installation is completed \e[0m******"
+echo -e "****** \e[35m $COMPONENT installation is completed \e[0m******"
