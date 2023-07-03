@@ -8,34 +8,27 @@ if [ $ID -ne 0 ] ; then
     exit 1
 fi
 
-echo -n "Installing Nginx :"
-yum install nginx -y &>> "/tmp/${COMPONENT}.log"
-
-if [ $? -eq 0 ] ; then
+stat() {
+if [ $1 -eq 0 ] ; then
     echo -e "\e[32m success \e[0m"
 else
     echo - "\e[32m failure \e[0m"
+    exit 2
 fi
+}
+
+echo -n "Installing Nginx :"
+yum install nginx -y &>> "/tmp/${COMPONENT}.log"
+stat $?
 
 echo -n "Downloading the ${COMPONENT} component :"
 curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/${COMPONENT}/archive/main.zip"
-
-if [ $? -eq 0 ] ; then
-    echo -e "\e[32m success \e[0m"
-else
-    echo - "\e[32m failure \e[0m"
-fi
+stat $?
 
 echo -n "performing cleanup: "
 cd /usr/share/nginx/html
 rm -rf *  &>> "/tmp/{COMPONENT}.log"
-
-
-if [ $? -eq 0 ] ; then
-    echo -e "\e[32m success \e[0m"
-else
-    echo - "\e[32m failure \e[0m"
-fi
+stat $?
 
 # The frontend is the service in RobotShop to serve the web content over Nginx.
 
