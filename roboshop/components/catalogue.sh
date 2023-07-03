@@ -33,4 +33,4 @@ id $APPUSER
 if [ $? -ne 0 ] ; then
     echo -n "Creating the Service Account:"
     useradd $APPUSER
-stat $?
+    stat $?
