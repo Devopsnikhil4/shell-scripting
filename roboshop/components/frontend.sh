@@ -45,6 +45,7 @@ echo -n "Updating the Backend component reverseproxy details :"
 for component in catalogue ; do
     sed -i -e "/$COMPONENT/s/localhost/$COMPONENT.roboshop.internal" /etc/nginx/default.d/roboshop.conf
 done
+stat $?
 
 echo -n "Starting ${COMPONENT} service: "
 systemctl daemon-reload &>> LOGFILE
