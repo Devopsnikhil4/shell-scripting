@@ -45,7 +45,7 @@ cd /home/${APPUSER}
 unzip -o /tmp/catalogue.zip &>> LOGFILE
 stat $?
 
-echo -n "Modifying the ownership"
+echo -n "Modifying the ownership :"
 mv $COMPONENT-main/ $COMPONENT
 chown -R $APPUSER:$APPUSER /home/roboshop/$COMPONENT
 stat $?
