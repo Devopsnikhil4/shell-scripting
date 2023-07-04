@@ -49,3 +49,8 @@ echo -n "Modifying the ownership :"
 mv $COMPONENT-main/ $COMPONENT
 chown -R $APPUSER:$APPUSER /home/roboshop/$COMPONENT/
 stat $?
+
+echo -n "Genrating npm $COMPONENT artifacts :"
+cd /home/${APPUSER}/${COMPONENT}/
+npm install &>> LOGFILE
+stat $?
