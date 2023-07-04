@@ -1,6 +1,6 @@
 #!bin/bash
 
-COMPONENT=mongodb
+COMPONENT=catalogue
 LOGFILE="/tmp/${COMPONENT}.log"
 APPUSER="roboshop"
 
