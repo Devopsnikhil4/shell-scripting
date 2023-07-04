@@ -55,3 +55,4 @@ stat $?
 
 echo -e "****** \e[35m $COMPONENT installation is completed \e[0m******"
 echo -e "****** \e[35m $COMPONENT installation is completed \e[0m******"
+echo -e "****** \e[35m $COMPONENT installation is completed \e[0m******"
