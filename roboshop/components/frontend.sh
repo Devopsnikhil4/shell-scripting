@@ -41,6 +41,16 @@ rm -rf ${COMPONENT}-main README.md
 mv localhost.conf /etc/nginx/default.d/roboshop.conf
 stat $?
 
+echo -n "Updating the Backend component reverseproxy details :"
+for component in catalogue ; do
+    sed -i -e "/$component/s/localhost/$component.roboshop.internal" /etc/nginx/default.d/roboshop.conf
+done
+stat $?
 
+echo -n "Starting ${COMPONENT} service: "
+systemctl daemon-reload &>> LOGFILE
+systemctl enable nginx &>> LOGFILE
+systemctl restart nginx &>> LOGFILE
+stat $?
 
 echo -e "****** \e[35m $COMPONENT installation is completed \e[0m******"
